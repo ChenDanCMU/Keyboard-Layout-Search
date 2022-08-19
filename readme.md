@@ -108,11 +108,10 @@ def compute_effort_matices(num_keys,effort_grid,finger,row,sfb_pen):
 In this section we show how the proposed objective can be formulated as a [Quadratic Assignment Problem](https://en.wikipedia.org/wiki/Quadratic_assignment_problem), which leads to efficient optimization.
 
 Since we assumed $s[0] = s[L-1] = "~"$ which does not count toward Base Effort or Penalty, we have:
-$$ \begin{align*}
+$$\begin{align*}
 \text{TotalEffort}(\pi, s) &= \frac{1}{m_1}\sum_{0 \le i \le L-1} \text{BaseEffort}(\pi(s[i])) +\frac{1}{m_2}\sum_{0 \le i \le L-2} \text{Penalty}(\pi(s[i]), \pi(s[i+1]))\\
 &= \sum_{i=0}^{L-2} \frac{1}{2m_1}(\text{BaseEffort}(\pi(s[i])) + \text{BaseEffort}(\pi(s[i+1]))) + \frac{1}{m_2}\text{Penalty}(\pi(s[i]), \pi(s[i+1]))
-\end{align*}
-$$
+\end{align*}$$
 For any given letter pair $(c, c')\in \alpha \times \alpha$, let $N(c,c', s)$ be the number of indices $i$ in $s$ such that $(s[i],s[i+1]) = (c, c')$. Now the equation simplifies to:
 $$ \begin{align*}
 \text{TotalEffort}(\pi, s) 
