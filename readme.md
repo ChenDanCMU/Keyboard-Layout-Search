@@ -34,7 +34,7 @@ We introduce a simple model for quantifying the difficulty of typing a given tex
 
 Define the total effort for typing $s$ by:
 
-$\text{TotalEffort}(\pi, s) = \frac{1}{m_1}\sum_{0 \le L \le L-1} \text{BaseEffort}(\pi(s[i])) +\frac{1}{m_2}\sum_{0 \le L \le L-2} \text{Penalty}(\pi(s[i]), \pi(s[i+1])). $
+$\text{TotalEffort}(\pi, s) = \frac{1}{m_1}\sum_{0 \le i \le L-1} \text{BaseEffort}(\pi(s[i])) +\frac{1}{m_2}\sum_{0 \le i \le L-2} \text{Penalty}(\pi(s[i]), \pi(s[i+1])). $
 
 Here, $m_1$ is the number of characters that is not a space key, and $m_2$ is the number of bigrams $(s[i], s[i+1])$ such that neither of them is a space key.
 
