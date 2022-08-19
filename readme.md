@@ -109,7 +109,7 @@ In this section we show how the proposed objective can be formulated as a [Quadr
 
 Since we assumed $s[0] = s[L-1] = "~"$ which does not count toward Base Effort or Penalty, we have:
 $$ \begin{align*}
-\text{TotalEffort}(\pi, s) &= \frac{1}{m_1}\sum_{i=0}^{L-1} \text{BaseEffort}(\pi(s[i])) +\frac{1}{m_2}\sum_{i=0}^{L-2} \text{Penalty}(\pi(s[i]), \pi(s[i+1]))\\
+\text{TotalEffort}(\pi, s) &= \frac{1}{m_1}\sum_{0 \le i \le L-1} \text{BaseEffort}(\pi(s[i])) +\frac{1}{m_2}\sum_{0 \le i \le L-2} \text{Penalty}(\pi(s[i]), \pi(s[i+1]))\\
 &= \sum_{i=0}^{L-2} \frac{1}{2m_1}(\text{BaseEffort}(\pi(s[i])) + \text{BaseEffort}(\pi(s[i+1]))) + \frac{1}{m_2}\text{Penalty}(\pi(s[i]), \pi(s[i+1]))
 \end{align*}
 $$
