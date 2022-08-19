@@ -108,6 +108,7 @@ def compute_effort_matices(num_keys,effort_grid,finger,row,sfb_pen):
 In this section we show how the proposed objective can be formulated as a [Quadratic Assignment Problem](https://en.wikipedia.org/wiki/Quadratic_assignment_problem), which leads to efficient optimization.
 
 Since we assumed $s[0] = s[L-1] = "~"$ which does not count toward Base Effort or Penalty, we have:
+
 $$ \begin{align*}
 \text{TotalEffort}(\pi, s) &= \frac{1}{m_1}\sum_{0 \le i \le L-1} \text{BaseEffort}(\pi(s[i])) +\frac{1}{m_2}\sum_{0 \le i \le L-2} \text{Penalty}(\pi(s[i]), \pi(s[i+1]))\\
 &= \sum_{i=0}^{L-2} \frac{1}{2m_1}(\text{BaseEffort}(\pi(s[i])) + \text{BaseEffort}(\pi(s[i+1]))) + \frac{1}{m_2}\text{Penalty}(\pi(s[i]), \pi(s[i+1]))
@@ -119,7 +120,9 @@ $$ \begin{align*}
 &= \sum_{c, c' \in \alpha} N(c,c', s) \cdot \left(\frac{1}{2m_1}(\text{BaseEffort}(\pi(c)) + \text{BaseEffort}(\pi(c'))) + \frac{1}{m_2} \text{Penalty}(\pi(c), \pi(c')) \right)
 \end{align*}
 $$
+
 Denote 
+
 $$\text{Cost}(a,b) = \frac{1}{2m_1}(\text{BaseEffort}(a) + \text{BaseEffort}(b)) + \frac{1}{m_2}\text{Penalty}(a,b) $$
 Now we have a simple expression for the TotalEffort:
 $$\text{TotalEffort}(\pi, s)  = \sum_{0 \le i, j < n} N(\alpha[i],\alpha[j], s) \cdot \text{Cost}(\pi(i), \pi(j))$$
