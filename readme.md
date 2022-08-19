@@ -130,7 +130,7 @@ $$\text{TotalEffort}(\pi, s)  = \sum_{0 \le i, j < n} N(\alpha[i],\alpha[j], s) 
 This is an instance of [Quadratic Assignment Problem](https://en.wikipedia.org/wiki/Quadratic_assignment_problem). Here, the problem is to find a bijection $\pi: P \rightarrow P$, s.t. $\sum_{a, b \in P} w_{a,b} d(\pi(a),\pi(b))$ is minimized. 
 
 It is exactly the definition of TotalEffort if we choose
-$P = \{0,  1, ..., n-1\}$, $w_{i,j} =N(\alpha[i],\alpha[j], s) $ and $d(\pi(a),\pi(b)) = \text{Cost}(a, b)$.
+$P = \{0,  1, ..., n-1\}$, $w_{i,j} =N(\alpha[i],\alpha[j], s)$ and $d(\pi(a),\pi(b)) = \text{Cost}(a, b)$.
 
 
 ```python
