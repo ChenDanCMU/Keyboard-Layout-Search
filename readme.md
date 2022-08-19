@@ -16,7 +16,7 @@ In this note, we provide a combinatorial algorithm for designing keyboard layout
 
 We assume the keyboard has $n$ keys, indexed by $\{0, 1, ..., n-1\}$. An alphabet $\alpha$ of $n$ keys are required to be placed on the keyboard. For our purpose, we are interested in a setting where $n=31$: the keyboard is in a 10x3 matrix format, with an additional space key that is fixed, and the alphabet is $\alpha$ = "abcdefghijklmnopqrstuvwxyz,./' ". Denote the text by a string $s$ with length $L$, which may contain characters from $\alpha$. For simplicity, we assume the first character and the last character of $s$ are both space characters. 
 
-A keyboard layout $\pi$ is a permutation from $\{0, 1, ..., n-1\}$ to $\{0, 1, ..., n-1\}$.  $\pi(i) = j$ means that the character $\alpha[i] $ is assigned to the $j$-th key on the keyboard. Our goal is to find a keyboard layout $\pi$ that types the text $s$ most easily, based on certain quantitative criteria.
+A keyboard layout $\pi$ is a permutation from $\{0, 1, ..., n-1\}$ to $\{0, 1, ..., n-1\}$.  $\pi(i) = j$ means that the character $\alpha[i]$ is assigned to the $j$-th key on the keyboard. Our goal is to find a keyboard layout $\pi$ that types the text $s$ most easily, based on certain quantitative criteria.
 
 
 ```python
@@ -391,19 +391,6 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
